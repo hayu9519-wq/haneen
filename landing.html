@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolios - Haireya Ahmed & Haneen Alanze</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1a3a52 0%, #2d5a7b 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+        
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .portfolios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .portfolio-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+        }
+        
+        .portfolio-header {
+            background: linear-gradient(135deg, #ffc107, #ff9800);
+            padding: 30px;
+            text-align: center;
+            color: white;
+        }
+        
+        .portfolio-header h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        
+        .portfolio-header p {
+            font-size: 1.05em;
+            opacity: 0.95;
+        }
+        
+        .portfolio-content {
+            padding: 30px;
+        }
+        
+        .portfolio-content ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .portfolio-content li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            color: #333;
+        }
+        
+        .portfolio-content li:last-child {
+            border-bottom: none;
+        }
+        
+        .portfolio-content li::before {
+            content: "✓ ";
+            color: #ffc107;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #ffc107, #ff9800);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 193, 7, 0.3);
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.05em;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 193, 7, 0.5);
+        }
+        
+        .haireya-btn { background: linear-gradient(135deg, #1a3a52, #2d5a7b); }
+        .haireya-btn:hover { box-shadow: 0 15px 40px rgba(26, 58, 82, 0.5); }
+        
+        .haneen-btn { background: linear-gradient(135deg, #0066cc, #00ccff); }
+        .haneen-btn:hover { box-shadow: 0 15px 40px rgba(0, 102, 204, 0.5); }
+        
+        footer {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .portfolios {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌟 Professional Portfolios</h1>
+        
+        <div class="portfolios">
+            <!-- Haireya Portfolio -->
+            <div class="portfolio-card">
+                <div class="portfolio-header" style="background: linear-gradient(135deg, #1a3a52, #2d5a7b);">
+                    <h2>Haireya Ahmed</h2>
+                    <p>Managing Director</p>
+                </div>
+                <div class="portfolio-content">
+                    <ul>
+                        <li>11+ Years Leadership Experience</li>
+                        <li>Strategic Planning Expert</li>
+                        <li>International Commerce</li>
+                        <li>Business Development</li>
+                        <li>Team Management</li>
+                    </ul>
+                    <a href="haireya-ahmed.html" class="btn haireya-btn">View Portfolio</a>
+                </div>
+            </div>
+            
+            <!-- Haneen Portfolio -->
+            <div class="portfolio-card">
+                <div class="portfolio-header" style="background: linear-gradient(135deg, #0066cc, #00ccff);">
+                    <h2>Haneen Alanze</h2>
+                    <p>CSSD Supervisor</p>
+                </div>
+                <div class="portfolio-content">
+                    <ul>
+                        <li>7+ Years Healthcare Experience</li>
+                        <li>Certified Sterile Processing</li>
+                        <li>Infection Control Expert</li>
+                        <li>Department Leadership</li>
+                        <li>CBAHI Compliance</li>
+                    </ul>
+                    <a href="index.html" class="btn haneen-btn">View Portfolio</a>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2026 Professional Portfolios | Hosted on GitHub Pages</p>
+        </footer>
+    </div>
+</body>
+</html>
