@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Haneen Alanze - CSSD Supervisor</title>
+
+  <!-- SEO & Social -->
+  <meta name="description" content="Haneen Alanze — CSSD Supervisor. Certified Sterile Processing Technician with 7+ years of experience in Central Sterile Services, infection control, and accreditation readiness." />
+  <meta name="theme-color" content="#003366" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Haneen Alanze — CSSD Supervisor" />
+  <meta property="og:description" content="Certified Sterile Processing Technician with 7+ years of experience in Central Sterile Services." />
+  <meta property="og:image" content="https://i.ibb.co/8nHRt5J3/image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="icon" href="/favicon.ico" />
+
+  <style>
+    :root{--bg1:#0f0f23;--bg2:#1a1a3e;--accent1:#0066cc;--accent2:#00ffff;--text-dark:#003366}
+    *{margin:0;padding:0;box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      font-family:'Poppins',sans-serif;
+      background:linear-gradient(135deg,var(--bg1) 0%,var(--bg2) 50%,#0f2f4f 100%);
+      color:#333;min-height:100vh;overflow-x:hidden;
+    }
+
+    /* Animated Background */
+    .animated-bg{
+      position:fixed;top:0;left:0;width:100%;height:100%;
+      background:linear-gradient(-45deg,#0066cc,#0099ff,#00ccff,#0066cc);
+      background-size:400% 400%;animation:gradientShift 15s ease infinite;z-index:-1;opacity:0.5;
+    }
+    @keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+
+    /* Floating shapes */
+    .shape{position:fixed;opacity:0.08;z-index:-1}
+    .shape1{width:300px;height:300px;background:radial-gradient(circle,#fff 0%,transparent 70%);border-radius:50%;top:-100px;left:-100px;animation:float 20s infinite ease-in-out}
+    .shape2{width:200px;height:200px;background:radial-gradient(circle,#00ffff 0%,transparent 70%);border-radius:50%;bottom:100px;right:-50px;animation:float 25s infinite ease-in-out reverse}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(30px)}}
+
+    header{
+      position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px 20px;
+      background:linear-gradient(135deg, rgba(0,102,204,0.95) 0%, rgba(0,51,102,0.95) 100%);
+      color:white;overflow:hidden;
+    }
+    header::before{
+      content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");opacity:0.5
+    }
+
+    .header-content{position:relative;z-index:1;max-width:1000px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+    .profile-img-wrapper{position:relative;display:flex;justify-content:center;align-items:center}
+    .profile-img{width:280px;height:280px;border-radius:50%;border:8px solid white;object-fit:cover;box-shadow:0 20px 60px rgba(0,0,0,.4);animation:scaleIn .8s ease-out}
+    .glow-ring{position:absolute;width:320px;height:320px;border:3px solid rgba(255,255,255,.3);border-radius:50%;animation:pulse 2s ease-in-out infinite}
+    @keyframes scaleIn{from{transform:scale(.8);opacity:0}to{transform:scale(1);opacity:1}}
+    @keyframes pulse{0%,100%{transform:scale(1);opacity:.3}50%{transform:scale(1.1);opacity:.1}}
+
+    .header-text h1{font-size:3.5em;font-weight:700;margin-bottom:15px;text-shadow:0 4px 20px rgba(0,0,0,.3);animation:slideInLeft .8s ease-out}
+    .title-highlight{font-size:1.3em;color:var(--accent2);font-weight:600;margin-bottom:20px;animation:slideInLeft .8s ease-out .2s backwards;text-shadow:0 0 20px rgba(0,255,255,.5)}
+    .subtitle{font-size:1.1em;color:rgba(255,255,255,.95);margin-bottom:30px;line-height:1.6;animation:slideInLeft .8s ease-out .4s backwards}
+
+    .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:40px 0}
+    .stat-card{background:rgba(255,255,255,.08);backdrop-filter:blur(10px);padding:20px;border-radius:10px;text-align:center;border:1px solid rgba(255,255,255,.12);animation:slideInLeft .8s ease-out .6s backwards}
+    .stat-number{font-size:2.5em;font-weight:700;color:var(--accent2);text-shadow:0 0 20px rgba(0,255,255,.5)}
+    .stat-label{font-size:.9em;color:rgba(255,255,255,.85);margin-top:5px}
+
+    .cta-button{display:inline-block;background:linear-gradient(135deg,var(--accent2),#00ccff);color:var(--text-dark);padding:15px 40px;border-radius:50px;text-decoration:none;font-weight:700;margin-top:20px;transition:all .3s ease;box-shadow:0 10px 30px rgba(0,255,255,.3);animation:slideInLeft .8s ease-out .8s backwards}
+    .cta-button:hover{transform:translateY(-3px);box-shadow:0 15px 40px rgba(0,255,255,.5)}
+
+    @keyframes slideInLeft{from{transform:translateX(-50px);opacity:0}to{transform:translateX(0);opacity:1}}
+
+    nav{background:rgba(255,255,255,.98);padding:14px 20px;position:sticky;top:0;box-shadow:0 10px 40px rgba(0,0,0,.12);z-index:100;backdrop-filter:blur(6px)}
+    nav ul{list-style:none;display:flex;justify-content:center;gap:28px;max-width:1200px;margin:0 auto;flex-wrap:wrap}
+    nav a{color:var(--accent1);text-decoration:none;font-weight:600;transition:all .2s ease;position:relative;padding:6px 0}
+    nav a::after{content:'';position:absolute;bottom:-6px;left:0;width:0;height:3px;background:linear-gradient(90deg,var(--accent1),var(--accent2));transition:width .25s ease}
+    nav a:hover::after{width:100%}
+
+    .container{max-width:1200px;margin:0 auto;padding:60px 20px}
+    section{background:white;margin-bottom:50px;padding:50px;border-radius:15px;box-shadow:0 15px 50px rgba(0,0,0,.08);animation:fadeInUp .8s ease-out}
+    @keyframes fadeInUp{from{transform:translateY(30px);opacity:0}to{transform:translateY(0);opacity:1}}
+
+    h2{color:var(--accent1);font-size:2.2em;margin-bottom:24px;padding-bottom:12px}
+    .competencies-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-bottom:20px}
+    .competency-card{background:linear-gradient(135deg,#f0f7ff 0%,#e8f4ff 100%);padding:20px;border-radius:12px;border-left:5px solid var(--accent1);transition:all .25s ease;box-shadow:0 5px 20px rgba(0,102,204,.06)}
+    .competency-card h4{color:var(--accent1);margin-bottom:10px;font-size:1.05em}
+    .competency-card ul{list-style:none}
+    .competency-card li{padding:6px 0;color:#555;position:relative;padding-left:22px}
+    .competency-card li::before{content:"◆";position:absolute;left:0;color:var(--accent2);font-size:.75em}
+
+    .experience-item{margin-bottom:20px;padding:20px;background:linear-gradient(135deg,#fff 0%,#f9f9f9 100%);border-radius:12px;border-left:5px solid var(--accent1);transition:all .25s ease}
+    .job-title{font-size:1.2em;color:var(--accent1);font-weight:700;margin-bottom:6px}
+    .company{color:var(--accent2);font-weight:600;font-size:1em;margin-bottom:6px}
+    .date{color:#777;font-size:.95em;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+    .date::before{content:"📅"}
+    .job-description ul{list-style:none;margin-top:10px}
+    .job-description li{padding:8px 0;color:#666;position:relative;padding-left:26px;line-height:1.5}
+    .job-description li::before{content:"→";position:absolute;left:0;color:var(--accent2);font-weight:bold;font-size:1.1em}
+
+    .certifications-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .cert-card{background:linear-gradient(135deg,#fff0f0 0%,#ffe8e8 100%);padding:18px;border-radius:12px;text-align:center;border:2px solid #ff6b6b;transition:all .25s ease;position:relative;overflow:hidden}
+    .cert-card::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#ff6b6b,#ff8c8c)}
+    .cert-icon{font-size:2.2em;margin-bottom:10px}
+    .cert-card h4{color:#c92a2a;margin-bottom:8px;font-size:1.05em}
+    .cert-card p{color:#666;font-size:.95em}
+
+    .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+    .skill-tag{background:linear-gradient(135deg,var(--accent1),#00ccff);color:white;padding:10px 16px;border-radius:50px;text-align:center;font-weight:600;box-shadow:0 5px 15px rgba(0,102,204,.12);cursor:default}
+
+    .highlights-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .highlight-card{background:linear-gradient(135deg,#e8f5ff 0%,#f0faff 100%);padding:18px;border-radius:12px;border:2px solid var(--accent2);text-align:center;transition:all .25s ease;position:relative;overflow:hidden}
+    .highlight-icon{font-size:1.6em;margin-bottom:8px}
+    .highlight-card h4{color:var(--accent1);margin-bottom:6px;font-size:1.05em}
+    .highlight-card p{color:#666;font-size:.95em}
+
+    .languages{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+    .language-item{background:linear-gradient(135deg,#f0f7ff 0%,#e8f4ff 100%);padding:14px;border-radius:12px;text-align:center;border:2px solid var(--accent1)}
+    .language-item h4{color:var(--accent1);margin-bottom:8px;font-size:1.1em}
+    .proficiency{width:100%;height:10px;background:#ddd;border-radius:5px;overflow:hidden;margin-top:10px;box-shadow:inset 0 2px 4px rgba(0,0,0,.06)}
+    .proficiency-bar{height:100%;background:linear-gradient(90deg,var(--accent1),var(--accent2));border-radius:5px;animation:fillBar 1.5s ease-out forwards}
+    @keyframes fillBar{from{width:0}}
+
+    footer{background:linear-gradient(135deg,var(--accent1) 0%,#003366 100%);color:white;text-align:center;padding:40px 20px;margin-top:40px}
+    footer h3{font-size:1.2em;margin-bottom:12px}
+    .contact-links{display:flex;justify-content:center;gap:20px;margin-top:12px;flex-wrap:wrap}
+    .contact-links a{color:var(--accent2);text-decoration:none;font-weight:600}
+    .contact-links a:hover{transform:scale(1.05);text-shadow:0 0 12px rgba(0,255,255,.6)}
+
+    /* Focus styles for accessibility */
+    a:focus,button:focus{outline:3px solid rgba(0,204,255,.25);outline-offset:3px}
+    a:focus-visible{outline:3px solid rgba(0,204,255,.35);outline-offset:3px}
+
+    @media(max-width:768px){
+      .header-content{grid-template-columns:1fr;gap:28px}
+      .header-text h1{font-size:2.2em}
+      section{padding:20px}
+      h2{font-size:1.6em}
+      nav ul{gap:12px}
+      .stats-grid{grid-template-columns:1fr}
+      .profile-img{width:220px;height:220px}
+      .glow-ring{width:260px;height:260px}
+      .animated-bg{opacity:0.35}
+    }
+  </style>
+</head>
+<body>
+  <div class="animated-bg" aria-hidden="true"></div>
+  <div class="shape shape1" aria-hidden="true"></div>
+  <div class="shape shape2" aria-hidden="true"></div>
+
+  <header>
+    <div class="header-content">
+      <div class="profile-img-wrapper" aria-hidden="false">
+        <div class="glow-ring" aria-hidden="true"></div>
+        <img class="profile-img" src="https://i.ibb.co/8nHRt5J3/image.jpg" alt="Haneen Alanze portrait" loading="lazy" width="280" height="280">
+      </div>
+
+      <div class="header-text">
+        <h1>Haneen Alanze</h1>
+        <div class="title-highlight">✨ CSSD Supervisor & Healthcare Leader</div>
+        <p class="subtitle">Certified Sterile Processing Technician with 7+ years of expertise in Central Sterile Services, infection control, and operational excellence across leading hospitals in the Middle East.</p>
+
+        <div class="stats-grid" role="list" aria-label="Key stats">
+          <div class="stat-card" role="listitem"><div class="stat-number">7+</div><div class="stat-label">Years Experience</div></div>
+          <div class="stat-card" role="listitem"><div class="stat-number">3</div><div class="stat-label">Certifications</div></div>
+          <div class="stat-card" role="listitem"><div class="stat-number">2</div><div class="stat-label">Countries</div></div>
+        </div>
+
+        <a class="cta-button" href="#competencies" role="button">Explore My Work</a>
+      </div>
+    </div>
+  </header>
+
+  <nav role="navigation" aria-label="Main navigation">
+    <ul>
+      <li><a href="#competencies">Competencies</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#languages">Languages</a></li>
+      <li><a href="#highlights">Achievements</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <section id="competencies">
+      <h2>Core Competencies</h2>
+      <div class="competencies-grid">
+        <div class="competency-card">
+          <h4>🔬 Sterile Processing</h4>
+          <ul>
+            <li>Steam & Plasma Sterilization</li>
+            <li>Load Verification & Validation</li>
+            <li>BI/CI Management</li>
+            <li>Autoclave Operation</li>
+            <li>Instrument Traceability</li>
+            <li>Decontamination Protocols</li>
+          </ul>
+        </div>
+        <div class="competency-card">
+          <h4>👥 Leadership & Management</h4>
+          <ul>
+            <li>Department Establishment</li>
+            <li>Workflow Optimization</li>
+            <li>Staff Training & Development</li>
+            <li>Performance Evaluation</li>
+            <li>SOP Development</li>
+            <li>Accreditation Prep</li>
+          </ul>
+        </div>
+        <div class="competency-card">
+          <h4>📊 Operations & Compliance</h4>
+          <ul>
+            <li>Inventory Management</li>
+            <li>Quality Assurance</li>
+            <li>KPI Monitoring</li>
+            <li>Interdepartmental Coordination</li>
+            <li>CBAHI Compliance</li>
+            <li>Documentation Systems</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Professional Experience</h2>
+
+      <div class="experience-item">
+        <div class="job-title">🏥 CSSD Supervisor</div>
+        <div class="company">MedTown Hospital | Riyadh, Saudi Arabia</div>
+        <div class="date">December 2025 - Present</div>
+        <div class="job-description">
+          <ul>
+            <li>Leading design and implementation of new CSSD department from conception with facility layout and workflow planning</li>
+            <li>Developing comprehensive SOPs and operational manuals aligned with CBAHI standards</li>
+            <li>Creating sterilization logs, tracking systems, and instrument traceability</li>
+            <li>Monitoring steam and plasma sterilization processes with validation oversight</li>
+            <li>Managing inventory and coordinating with OR and clinical departments</li>
+            <li>Supervising staff and preparing for accreditation audits</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="job-title">🧪 Sterilization Technician</div>
+        <div class="company">Hospital Riyadh | Riyadh, Saudi Arabia</div>
+        <div class="date">November 2023 - Present</div>
+        <div class="job-description">
+          <ul>
+            <li>Operating and monitoring autoclaves and low-temperature sterilizers with precision</li>
+            <li>Managing sterilization cycles and validating loads for accuracy</li>
+            <li>Maintaining detailed sterilization records and documentation</li>
+            <li>Collaborating with OR and clinical departments</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="job-title">🧪 Sterilization Technician</div>
+        <div class="company">Dr. Muhammad Al-Faqih Hospital | Riyadh</div>
+        <div class="date">October 2021 - October 2023</div>
+        <div class="job-description">
+          <ul>
+            <li>Performing sterilization procedures using steam and chemical methods</li>
+            <li>Monitoring autoclave operations and equipment maintenance</li>
+            <li>Managing instrument decontamination and packaging</li>
+            <li>Supporting infection control initiatives</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="job-title">🧪 Sterilization Technician</div>
+        <div class="company">Al-Specialty Hospital | Amman, Jordan</div>
+        <div class="date">August 2018 - August 2021</div>
+        <div class="job-description">
+          <ul>
+            <li>Operating sterilization equipment including autoclaves and low-temperature sterilizers</li>
+            <li>Processing and sterilizing medical instruments and surgical equipment</li>
+            <li>Managing instrument inventory and supply ordering</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications">
+      <h2>Education & Certifications</h2>
+      <div class="certifications-grid">
+        <div class="cert-card">
+          <div class="cert-icon">🎓</div>
+          <h4>Diploma in Sterilization</h4>
+          <p><strong>Rafidah Al-Islami College</strong></p>
+          <p style="font-size:0.9em;margin-top:10px;color:#999">2016 - 2018</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">🏥</div>
+          <h4>SCFHS Certified</h4>
+          <p><strong>Certified Sterile Processing Technician</strong></p>
+          <p style="font-size:0.9em;margin-top:10px;color:#999">Saudi Commission for Health Specialties</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">✅</div>
+          <h4>CBAHI Compliance</h4>
+          <p><strong>Healthcare Accreditation Standards</strong></p>
+          <p style="font-size:0.9em;margin-top:10px;color:#999">International Standards</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">🛡️</div>
+          <h4>Infection Control</h4>
+          <p><strong>Healthcare Training Programs</strong></p>
+          <p style="font-size:0.9em;margin-top:10px;color:#999">Professional Development</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Technical Skills & Expertise</h2>
+      <div class="skills-grid">
+        <div class="skill-tag">Autoclave Operation</div>
+        <div class="skill-tag">Steam Sterilization</div>
+        <div class="skill-tag">Plasma Sterilization</div>
+        <div class="skill-tag">BI/CI Management</div>
+        <div class="skill-tag">Equipment Troubleshooting</div>
+        <div class="skill-tag">Instrument Processing</div>
+        <div class="skill-tag">Quality Assurance</div>
+        <div class="skill-tag">CBAHI Compliance</div>
+        <div class="skill-tag">Infection Control</div>
+        <div class="skill-tag">Inventory Management</div>
+        <div class="skill-tag">Team Leadership</div>
+        <div class="skill-tag">Staff Training</div>
+      </div>
+    </section>
+
+    <section id="languages">
+      <h2>Languages</h2>
+      <div class="languages">
+        <div class="language-item">
+          <h4>🌍 Arabic</h4>
+          <p style="margin-bottom:15px">Native/Fluent</p>
+          <div class="proficiency"><div class="proficiency-bar" style="width:100%"></div></div>
+        </div>
+        <div class="language-item">
+          <h4>🌐 English</h4>
+          <p style="margin-bottom:15px">Professional Working Proficiency</p>
+          <div class="proficiency"><div class="proficiency-bar" style="width:85%"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="highlights">
+      <h2>Professional Achievements</h2>
+      <div class="highlights-grid">
+        <div class="highlight-card"><div class="highlight-icon">⭐</div><h4>7+ Years Excellence</h4><p>Extensive hands-on experience in Central Sterile Services at leading hospitals</p></div>
+        <div class="highlight-card"><div class="highlight-icon">🏗️</div><h4>Department Builder</h4><p>Successfully established new CSSD from scratch with full compliance</p></div>
+        <div class="highlight-card"><div class="highlight-icon">🎯</div><h4>Sterilization Expert</h4><p>Specialized in validation and compliance with international standards</p></div>
+        <div class="highlight-card"><div class="highlight-icon">👥</div><h4>Strong Leader</h4><p>Proven team development and staff training capabilities</p></div>
+        <div class="highlight-card"><div class="highlight-icon">🌍</div><h4>International Experience</h4><p>Worked across Jordan and Saudi Arabia at premier healthcare facilities</p></div>
+        <div class="highlight-card"><div class="highlight-icon">🛡️</div><h4>Patient Safety Focus</h4><p>Committed to excellence and safety in every sterilization process</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <h3>Let's Connect & Collaborate</h3>
+    <p style="font-size:1.05em;margin-bottom:10px">I'm passionate about healthcare excellence and patient safety. Let's work together!</p>
+    <div class="contact-links">
+      <a href="mailto:alanzeh184@gmail.com" rel="noopener noreferrer">📧 Email</a>
+      <a href="https://www.linkedin.com/in/haneenalanze-2867a8243" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
+      <p>📍 Riyadh Region, Saudi Arabia</p>
+    </div>
+    <p style="margin-top:20px;padding-top:12px;border-top:1px solid rgba(255,255,255,.12);font-size:.95em;">© 2026 Haneen Alanze | CSSD Supervisor | Certified Sterile Processing Technician</p>
+  </footer>
+</body>
+</html>
